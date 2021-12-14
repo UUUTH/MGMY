@@ -1,0 +1,46 @@
+@charset "utf-8";
+/*
+Theme Name: megane salon matsuyama
+Theme URI: null
+Description: Description
+Author: 81bridge - LZJ
+Version: 1.0
+*/
+
+.aligncenter {
+	display: block;
+	margin: 0 auto;
+}
+.alignright {
+	float: right;
+}
+.alignleft {
+	float: left;
+}
+
+img[class*="wp-image-"],
+img[class*="attachment-"] {
+	height: auto;
+	max-width: 100%;
+}
+
+a.nolink,
+a.nolink:hover {
+	opacity: 1;
+	cursor: default;
+	pointer-events: none;
+}
+.wp-block-image figure,
+.wp-block-image figcaption {
+	display: block;
+}
+.bgimg {
+	width:100%;
+	display: block;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+.bgimg img {
+	display: none !important;
+}
