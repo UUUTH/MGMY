@@ -53,6 +53,41 @@
 		});
 		</script>
 </section>
+<!-- ------------------------BLOG------------------------ -->
+<?php 
+	$sticky = get_option('sticky_posts');
+	update_option('sticky_posts', array());
+	query_posts('showposts=5&post_type=post');if(have_posts()): ?>
+<section class="top-blog">
+	<div class="top-blog-inner">
+		<h3 class="top-common-h3">Blog</h3>
+		<p class="top-common-h3-caption">最新情報</p>
+		<ul class="top-blog-ul">
+			<?php while (have_posts()) : the_post(); ?>
+			<?php 
+			$terms = get_the_terms($post->ID,'category'); 
+			if($terms){
+				$subcats = array();
+				foreach($terms as $term){
+					if($term->parent==1){
+						$subcats[]=$term;
+					}
+				}
+			}
+			?>
+			<li class="top-blog-li">
+				<a href="<?php the_permalink();?>">
+					<span class="top-blog-li-day"><?php the_time('Y/m/d'); ?></span>
+					<?php if($subcats){?><?php foreach ($subcats as $subcat) {$color = get_field('ff_color', 'category_'.$subcat->term_id );?><span class="top-blog-li-tag all"<?php if($color){echo ' style="background-color:'.$color.';"';}?>><?php echo $subcat->name;?></span><?php }?><?php }?>
+					<span class="top-blog-li-txt"><?php the_title(); ?></span>
+				</a>
+			</li>
+			<?php endwhile;?>
+		</ul>
+		<p class="top-more-btn"><a href="<?php bloginfo('url');?>/blog">もっと見る</a></p>
+	</div>
+</section>
+<?php endif; wp_reset_query();update_option('sticky_posts', $sticky);?>
 <!-- ------------------------product------------------------ -->
 <section class="top-product">
 	<div class="top-product-inner">
@@ -90,41 +125,6 @@
 		</div>
 	</div>
 </section>
-<!-- ------------------------BLOG------------------------ -->
-<?php 
-	$sticky = get_option('sticky_posts');
-	update_option('sticky_posts', array());
-	query_posts('showposts=5&post_type=post');if(have_posts()): ?>
-<section class="top-blog">
-	<div class="top-blog-inner">
-		<h3 class="top-common-h3">Blog</h3>
-		<p class="top-common-h3-caption">最新情報</p>
-		<ul class="top-blog-ul">
-			<?php while (have_posts()) : the_post(); ?>
-			<?php 
-			$terms = get_the_terms($post->ID,'category'); 
-			if($terms){
-				$subcats = array();
-				foreach($terms as $term){
-					if($term->parent==1){
-						$subcats[]=$term;
-					}
-				}
-			}
-			?>
-			<li class="top-blog-li">
-				<a href="<?php the_permalink();?>">
-					<span class="top-blog-li-day"><?php the_time('Y/m/d'); ?></span>
-					<?php if($subcats){?><?php foreach ($subcats as $subcat) {$color = get_field('ff_color', 'category_'.$subcat->term_id );?><span class="top-blog-li-tag all"<?php if($color){echo ' style="background-color:'.$color.';"';}?>><?php echo $subcat->name;?></span><?php }?><?php }?>
-					<span class="top-blog-li-txt"><?php the_title(); ?></span>
-				</a>
-			</li>
-			<?php endwhile;?>
-		</ul>
-		<p class="top-more-btn"><a href="<?php bloginfo('url');?>/blog">もっと見る</a></p>
-	</div>
-</section>
-<?php endif; wp_reset_query();update_option('sticky_posts', $sticky);?>
 <!-- ------------------------SHOP------------------------ -->
 <section class="top-shop">
 	<div class="top-shop-inner">

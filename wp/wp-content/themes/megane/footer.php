@@ -1,7 +1,7 @@
 <!-- ------------------------フッター------------------------ -->
 <footer class="footer">
     <div id="footerNav" class="footer-nav">
-        <a href="https://www.heart-up.net/" class="footer-nav-contactlens" target="_blank">コンタクトレンズ</a>
+        <a href="<?php bloginfo('url');?>/shop" class="footer-nav-contactlens">店舗情報</a>
         <a href="<?php bloginfo('url');?>/contact" class="footer-nav-contact">お問い合わせ</a>
     </div>
     <div class="footer-inner">
@@ -34,9 +34,9 @@
                 <h4 class="footer-list-h4"><a href="<?php bloginfo('url');?>/shop">店舗情報</a></h4>
                 <ul class="footer-list-ul">
                     <li><a href="<?php bloginfo('url');?>/shop/#a01">・メガネの松山（亀岡本店）</a></li>
-                    <li><a href="<?php bloginfo('url');?>/shop/#a02">・ハートアップ亀岡（亀岡市）</a></li>
+                    <li><a href="<?php bloginfo('url');?>/shop/#a02">・ハートアップ亀岡</a></li>
                     <li><a href="<?php bloginfo('url');?>/shop/#a03">・メガネの松山（園部店）</a></li>
-                    <li><a href="<?php bloginfo('url');?>/shop/#a04">・STYLISH 松山（川辺郡）</a></li>
+                    <li><a href="<?php bloginfo('url');?>/shop/#a04">・STYLISH 松山（猪名川）</a></li>
                 </ul>
                 <h4 class="footer-list-h4 footer-blog"><a href="<?php bloginfo('url');?>/blog">ブログ</a></h4>
             </div>

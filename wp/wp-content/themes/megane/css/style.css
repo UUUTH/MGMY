@@ -105,15 +105,21 @@ a {
 	color: #fff;
 	font-size: 16px;
 	font-weight: bold;
-	padding: 20px 0 20px 38px;
-	text-align: left;
+	padding: 20px 40px;
+	text-align: center;
 	display: block;
 	margin:0 auto;
 	border-radius: 5px;
 	width: 178px;
-	background:url("../img/common/Icon__contactlens.png") no-repeat #B34542;
+	background-color:#B34542;
+	/*
+	text-align: left;
+	padding: 20px 0 20px 38px;
+	background-image:url("../img/common/Icon__contactlens.png");
+	background-position:no-repeat;
 	background-size: 22px;
 	background-position: left 10px top 15px;
+	*/
 }
 .btn__contactlens:hover{
 	opacity: .8;
@@ -598,9 +604,13 @@ a {
 		text-align: center;
 		box-sizing: border-box;
 		padding: 20px 0 20px 20px;
-		background: url(../img/common/Icon__contactlens.png) no-repeat #B34542;
+		background-color: #B34542;
+		/*
+		background-image: url(../img/common/Icon__contactlens.png);
+		background-repeat: no-repeat;
     	background-size: 22px;
     	background-position: left 20px top 15px;
+		*/
 	}
 	.footer-nav-contact {
 		display: block;
@@ -615,9 +625,14 @@ a {
 }
 @media (max-width: 750px) {
 	.footer-nav-contactlens {
+		padding: 20px 0;
+		background-color: #B34542;
+		/*
 		padding: 20px 0 20px 23px;
-		background: url(../img/common/Icon__contactlens.png) no-repeat #B34542;
+		background-image: url(../img/common/Icon__contactlens.png);
+		background-repeat: no-repeat;
     	background-position: left 10px top 13px;
+		*/
 	}
 }
 
@@ -787,7 +802,9 @@ a {
 ==================================================================================*/
 
 .top-product {
-	margin-top:100px;
+	margin-top:150px;
+	background: #F7F7F7;
+	padding:90px 0 100px;
 }
 .top-product-inner {
 	
@@ -855,7 +872,8 @@ a {
 
 @media (max-width: 750px) {
 	.top-product {
-		margin-top: 80px;
+		margin-top: 100px;
+    	padding: 80px 0 50px;
 	}
 	.top-product-box {
 		display: block;
@@ -886,9 +904,7 @@ a {
 ==================================================================================*/
 
 .top-blog {
-	margin-top:150px;
-	background: #F7F7F7;
-	padding:90px 0 100px;
+	margin-top:100px;
 }
 .top-blog-inner {
 	max-width: 1000px;
@@ -939,8 +955,7 @@ a {
 }
 @media (max-width: 750px) {
 	.top-blog {
-		margin-top: 100px;
-    padding: 80px 0 50px;
+		margin-top: 80px;
 	}
 	.top-blog-inner{
 		padding:0 15px;
@@ -1562,6 +1577,68 @@ contact-lens
 .contact-lens .inf-box .com-btn a {
 	display: block;
 }
+.txt-sub {
+    margin: 40px 0 110px 0;
+    text-align: center;
+}
+/*flow-box*/
+.flow-box {
+    width: 1000px;
+    margin: 0 auto;
+}
+.flow-list {
+    display: flex;
+	justify-content: space-between;
+    margin-bottom: 50px;
+}
+.flow-list li {
+    display: flex;
+    flex-wrap: wrap;
+	align-content: flex-start;
+	justify-content: center;
+    width: 310px;
+	padding-bottom: 30px;
+    box-shadow: 3px 3px 10px 0px rgb(0 0 0 / 16%);
+    border-radius: 0px;
+    box-sizing: border-box;
+}
+.flow-list .ttl {
+    width: 100%;
+	margin-bottom: 30px;
+}
+.flow-list .ttl span {
+	display: inline-block;
+    padding: 5px 15px;
+	color: #ffffff;
+    background-color: #B34542;
+}
+.flow-list .ttl-sub {
+    margin: 0 25px 30px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.flow-list .txt {
+    margin: 0 25px;
+}
+.flow-list .arrow{
+	align-content: center;
+	width: auto;
+	padding: 0;
+	box-shadow: none;
+}
+.hospital-info-wrapper {
+    display: flex;
+    margin: 0 -20px;
+}
+.hospital-info {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+.hospital-info .ttl {
+	font-weight: bold;
+    margin-bottom: 15px;
+}
 @media (min-width: 751px) {
 	.contact-lens .page-list a:hover {
 		opacity: 0.7;
@@ -1620,6 +1697,42 @@ contact-lens
 	}
 	.contact-lens .inf-box .com-btn a {
 		width: 96%;
+	}
+	.txt-sub {
+
+	}
+	/*flow-box*/
+	.flow-box {
+	    width: 96%;
+		max-width: 340px;
+		margin: 0 auto;
+	}
+	.flow-box .head-line02 {
+		margin-bottom: 65px;
+	}
+	.flow-list {
+	    flex-wrap: wrap;
+		padding: 0 3vw;
+	}
+	.flow-list li {
+	    width: 100%;
+	}
+	.flow-list .arrow {
+		width: 100%;
+	    margin: 15px 0;
+	}
+	.flow-list .arrow img {
+		transform: rotate(90deg);
+	}
+	.hospital-info-wrapper {
+	    flex-wrap: wrap;
+	}
+	.hospital-info {
+		width: 100%;
+		margin-bottom: 50px;
+	}
+	.hospital-info:last-child {
+		margin-bottom: 0;
 	}
 }
 @media (max-width: 374px) {
@@ -2392,8 +2505,11 @@ contact-lens
 	background-color: #F7F8F8;
 }
 .page-shop .link-list a {
+	height: 100%;
 	padding: 17px 35px 17px 20px;
-	display: block;
+	display: flex;
+    align-items: center;
+	justify-content: center;
 	color: #FFF;
 	background: #b34542 url(../img/common/icon05.png) no-repeat right 18px center / 14px;
 }
@@ -2539,6 +2655,29 @@ contact-lens
 	color: #1d97d8;
 	text-decoration: underline;
 }
+.tableScroll {
+	margin-bottom: 5px;
+}
+.tableShop {
+	width: 100%;
+    border-top: 1px solid #c0c0c0;
+    border-left: 1px solid #c0c0c0;
+}
+.tableShop th,
+.tableShop td {
+	padding: 3px;
+	text-align: center;
+	vertical-align: middle;
+    border-bottom: 1px solid #c0c0c0;
+}
+.tableShop th {
+    color: #ffffff;
+    background-color: #B34542;
+    border-right: 1px solid #ffffff;
+}
+.tableShop td {
+    border-right: 1px solid #c0c0c0;
+}
 @media (min-width: 751px) {
 	.page-shop .main-visual {
 		margin-bottom: 49px;
@@ -2547,17 +2686,14 @@ contact-lens
 	.page-shop .link-list {
 		margin: -5px 0 50px;
 		display: flex;
-		flex-wrap: wrap;
 	}
 	.page-shop .link-list li {
 		margin: 5px 5px 0 0;
-		width: 234px;
+		width: 25%;
 	}
 	.page-shop .link-list .item01 {
-		width: 251px;
 	}
 	.page-shop .link-list .item02 {
-		width: 266px;
 	}
 	.page-shop .link-list li:nth-child(4n) {
 		margin-right: 0;
@@ -2696,6 +2832,25 @@ contact-lens
 	.page-shop .inner-box .txt-link {
    		margin: -17px -10px 20px 0;
 		font-size: 14px;
+	}
+	.tableScroll {
+		padding-bottom: 30px;
+		overflow: auto;
+		white-space: nowrap;
+	}
+	.tableScroll::-webkit-scrollbar{
+		height: 10px;
+		background: #C7C7C7;
+	}
+	.tableScroll::-webkit-scrollbar-track{
+		background: #C7C7C7;
+	}
+	.tableScroll::-webkit-scrollbar-thumb {
+		background: #464646;
+		border-radius: 10px;
+	}
+	.tableShop {
+		width: 484px;
 	}
 }
 @media (max-width: 374px) {

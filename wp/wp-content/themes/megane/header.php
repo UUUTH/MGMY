@@ -61,7 +61,7 @@
 	<header id="header" class="header">
 		<h1><a href="<?php bloginfo('url');?>"><img src="<?php bloginfo('template_url');?>/img/common/header__logo.png"></a></h1>
 		<ul class="header__btn">
-			<li class="header__btn__contactlens"><a href="https://www.heart-up.net/" class="btn__contactlens" target="_blank">コンタクトレンズ</a></li>
+			<li class="header__btn__contactlens"><a href="<?php bloginfo('url');?>/shop" class="btn__contactlens">店舗情報</a></li>
 			<li class="header__btn__contact"><a href="<?php bloginfo('url');?>/contact" class="btn__contact">お問い合わせ</a></li>
 		</ul>
 		<div class="sp-menu header-sp">
@@ -98,9 +98,9 @@
 			<h4 class="navi__title navi__open"><a href="<?php bloginfo('url');?>/shop">店舗情報</a></h4>
 			<div class="navi__link">
 				<a href="<?php bloginfo('url');?>/shop/#a01">・メガネの松山（亀岡本店）</a>
-				<a href="<?php bloginfo('url');?>/shop/#a02">・ハートアップ亀岡（亀岡市）</a>
+				<a href="<?php bloginfo('url');?>/shop/#a02">・ハートアップ亀岡</a>
 				<a href="<?php bloginfo('url');?>/shop/#a03">・メガネの松山（園部店）</a>
-				<a href="<?php bloginfo('url');?>/shop/#a04">・STYLISH 松山（川辺郡）</a>
+				<a href="<?php bloginfo('url');?>/shop/#a04">・STYLISH 松山（猪名川）</a>
 			</div>
 		</div>
 		<div class="sp-navi-item not-open">
